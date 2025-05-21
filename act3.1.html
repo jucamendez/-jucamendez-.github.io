@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 3 | Actividad 03-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidad 3 | Actividad 03-1 :: Tema (JavaScript)</h1>
+    
+    <table id="tablaOperaciones">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Suma</th>
+                <th>Multiplicación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas se insertarán con JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        let opc;
+        do {
+            opc = Number(prompt("Dame un valor válido (entre 1 y 10):"));
+        } while (opc < 1 || opc > 10);
+
+        const tabla = document.querySelector('#tablaOperaciones tbody');
+
+        for (let i = 1; i <= 10; i++) {
+            const fila = document.createElement('tr');
+
+            const celdaNo = document.createElement('td');
+            celdaNo.textContent = i;
+            fila.appendChild(celdaNo);
+
+            const celdaSuma = document.createElement('td');
+            celdaSuma.innerHTML = `${opc} + ${i} = ${opc + i}`;
+            fila.appendChild(celdaSuma);
+
+            const celdaMultiplica = document.createElement('td');
+            celdaMultiplica.innerHTML = `${opc} × ${i} = ${opc * i}`;
+            fila.appendChild(celdaMultiplica);
+
+            tabla.appendChild(fila);
+        }
+    </script>
+</body>
+</html>

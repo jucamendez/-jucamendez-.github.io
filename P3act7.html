@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 3 | Actividad 07</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Rubén Cárdenas Sánchez">
+    <meta name="Fecha" content="13 de mayo de 2025">
+    <meta name="Descripción" content="Controles de Formulario">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .checkbox, .radio {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        fieldset {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        legend {
+            width: auto;
+            padding: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        function functionControles() {
+            let varCadena = "Detalles de los controles:";
+            // Acceso al Formulario
+            let varForm = document.forms["fmControles"];
+            
+            // Radio buttons
+            let varRadio = varForm.elements["groupRadio"];
+            varCadena += "\n - Radio: " + varRadio.value;
+            
+            // Checkboxes
+            let checks = [];
+            let varChecks = varForm.elements["groupCheck"];
+            for(let i=0; i<varChecks.length; i++) {
+                if(varChecks[i].checked) checks.push(varChecks[i].value);
+            }
+            varCadena += "\n - Check: " + checks.join(", ");
+            
+            // Select Basic
+            let varBasic = varForm.elements["selectBasic"];
+            varCadena += "\n - Basic: " + varBasic.value;
+            
+            // Select Multiple
+            let multiples = [];
+            let varMultiple = varForm.elements["selectMultiple"];
+            for(let i=0; i<varMultiple.options.length; i++) {
+                if(varMultiple.options[i].selected) multiples.push(varMultiple.options[i].text);
+            }
+            varCadena += "\n - Multiple: " + multiples.join(", ");
+            
+            // Otros controles
+            let varFile = varForm.elements["varFile"];
+            varCadena += "\n - Archivo: " + (varFile.value || "Ninguno");
+            
+            let varColor = varForm.elements["varColor"];
+            varCadena += "\n - Color: " + varColor.value;
+            
+            let varDate = varForm.elements["varDate"];
+            varCadena += "\n - Fecha: " + varDate.value;
+            
+            let varTime = varForm.elements["varTime"];
+            varCadena += "\n - Tiempo: " + varTime.value;
+            
+            let varWeek = varForm.elements["varWeek"];
+            varCadena += "\n - Semana: " + varWeek.value;
+            
+            let varMonth = varForm.elements["varMonth"];
+            varCadena += "\n - Mes: " + varMonth.value;
+            
+            let varNumber = varForm.elements["varNumber"];
+            varCadena += "\n - Número: " + varNumber.value;
+            
+            let varRange = varForm.elements["varRange"];
+            varCadena += "\n - Rango: " + varRange.value;
+            
+            alert(varCadena);
+            return false; // Previene el envío real del formulario
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Unidad 3 | Actividad 07 :: Tema (Controles de Formulario)</h1>
+        
+        <form id="fmControles" class="form-horizontal" name="fmControles" action="#" method="post" onsubmit="return functionControles()">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Controles</legend>
+                
+                <!-- Multiple Radios -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="groupRadio">Tamaño</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label for="groupRadio-0">
+                                <input type="radio" name="groupRadio" id="groupRadio-0" value="9" checked="checked">
+                                1-9 personas
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="groupRadio-1">
+                                <input type="radio" name="groupRadio" id="groupRadio-1" value="19">
+                                10-19 personas
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="groupRadio-2">
+                                <input type="radio" name="groupRadio" id="groupRadio-2" value="29">
+                                20-29 personas
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Multiple Checkboxes -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="groupCheck">Elige ingredientes</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="groupCheck-0">
+                                <input type="checkbox" name="groupCheck" id="groupCheck-0" value="1">
+                                Queso
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="groupCheck-1">
+                                <input type="checkbox" name="groupCheck" id="groupCheck-1" value="2">
+                                Jamón
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="groupCheck-2">
+                                <input type="checkbox" name="groupCheck" id="groupCheck-2" value="3">
+                                Tocino
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="groupCheck-3">
+                                <input type="checkbox" name="groupCheck" id="groupCheck-3" value="4">
+                                Champiñones
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="groupCheck-4">
+                                <input type="checkbox" name="groupCheck" id="groupCheck-4" value="5">
+                                Pepperoni
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectBasic">Elige complemento</label>
+                    <div class="col-md-5">
+                        <select id="selectBasic" name="selectBasic" class="form-control">
+                            <option value="0">Ninguno</option>
+                            <option value="1">Papas</option>
+                            <option value="2">Brownies</option>
+                            <option value="3">Refresco</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Select Multiple -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectMultiple">Elige otras opciones</label>
+                    <div class="col-md-5">
+                        <select id="selectMultiple" name="selectMultiple" class="form-control" multiple="multiple">
+                            <option value="1">Mayonesa</option>
+                            <option value="2">Cátsup</option>
+                            <option value="3">Mostaza</option>
+                            <option value="4">Ranch</option>
+                            <option value="5">Pepinillos</option>
+                            <option value="6">Jalapeños</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Otros controles -->
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <label>Archivo</label> <input type="file" id="varFile" name="varFile"><br>
+                        <label>Color</label> <input type="color" id="varColor" name="varColor"><br>
+                        <label>Fecha</label> <input type="date" id="varDate" name="varDate"><br>
+                        <label>Tiempo</label> <input type="time" id="varTime" name="varTime"><br>
+                        <label>Semana</label> <input type="week" id="varWeek" name="varWeek"><br>
+                        <label>Mes</label> <input type="month" id="varMonth" name="varMonth"><br>
+                        <label>Números</label> <input type="number" id="varNumber" name="varNumber" min="0" max="100" step="10" value="50"><br>
+                        <label>Rango</label> <input type="range" id="varRange" name="varRange" min="0" max="100" step="1" value="50"><br>
+                    </div>
+                </div>
+                
+                <!-- Button -->
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <input type="submit" id="btnEnviar" name="btnEnviar" class="btn btn-primary" value="Enviar">
+                        <input type="reset" id="btnReset" name="btnReset" class="btn btn-default" value="Limpiar">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

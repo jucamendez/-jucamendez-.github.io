@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 3 | Actividad 06</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="Autor" content="Juan Carlos Méndez Manjarrez">
+    <meta name="Fecha" content="12 de mayo de 2025">
+    <meta name="Descripción" content="JavaScript">
+    <style>
+        p { 
+            color: limegreen; 
+            background-color: black; 
+            border: crimson 2px dashed; 
+            padding: 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        fieldset {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <script>
+        function funcionClick() { 
+            document.getElementById("varParrafo").innerHTML += "Hola mundo con Click!!!<br>"; 
+        }
+        function funcionDobleClick() { 
+            document.getElementById("varParrafo").innerHTML += "Hola mundo con DobleClick!!!<br>"; 
+        }
+        function functionValidar() { 
+            if (navigator.cookieEnabled == true) { 
+                alert("Bienvenido a mi sitio web!!!"); 
+            } 
+        }
+        function funcionOver(obj) { 
+            obj.style.backgroundColor = "navy"; 
+            obj.style.color = "white";
+        }
+        function funcionOut(obj) { 
+            obj.style.backgroundColor = "black"; 
+            obj.style.color = "limegreen";
+        }
+        function cambiaColor(color) { 
+            document.body.style.backgroundColor = color; 
+        }
+    </script>
+</head>
+<body onload="functionValidar()">
+    <h1>Unidad 3 | Actividad 06 :: Tema (JavaScript - Eventos)</h1>
+    <h3>Presiona el botón para ejecutar el código:</h3>
+    <button onclick="funcionClick()" ondblclick="funcionDobleClick()">Acción...</button>
+    <p id="varParrafo" onmouseover="funcionOver(this)" onmouseout="funcionOut(this)"></p>
+    <fieldset>
+        <legend>Elige un color de fondo...</legend>
+        <button onclick="cambiaColor('steelblue')">Azul</button>
+        <button onclick="cambiaColor('crimson')">Rojo</button>
+        <button onclick="cambiaColor('seagreen')">Verde</button>
+    </fieldset>
+</body>
+</html>

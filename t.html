@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Unidad 2 | Actividad 02</title>
+    <h1>Sanchez Davila Eduardo Juventino</h1>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="author" content="Méndez Manjarrez Juan Carlos">
+    <meta name="fecha" content="27/02/2025">
+    <meta name="descripción" content="Tablas">
+
+    <style>
+        /*ESTILO SACADO DE LA PAG: https://tabletag.net/es/*/
+        table,
+        td,
+        th {
+            text-align: center;
+            border: 1px solid #595959;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 3px;
+            width: 30px;
+            height: 25px;
+        }
+
+        th {
+            background: #f0e6cc;
+        }
+
+        .even {
+            background: #fbf8f0;
+        }
+
+        .odd {
+            background: #fefcf9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 2 | Actividad 02.1 :: Tema (Tablas combinadas)</h1>
+
+    <h3>Tablas con celdas combinadas</h3>
+
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="2">A</td>
+                <td>B</td>
+                <td rowspan="3">D</td>
+                <td colspan="2">E</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td rowspan="2">G</td>
+                <td rowspan="2">H</td>
+                <td rowspan="2">I</td>
+            </tr>
+            <tr>
+                <td colspan="2">J</td>
+            </tr>
+            <tr>
+                <td colspan="3">K</td>
+                <td>L</td>
+                <td colspan="2">M</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br><br>
+    <h2>Tabla 2:</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+                <td>G</td>
+            </tr>
+            <tr>
+                <td colspan="3">1</td>
+                <td rowspan="3">2</td>
+                <td colspan="2">3</td>
+                <td rowspan="2">4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td colspan="3">10</td>
+                <td colspan="2">11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td colspan="7">13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Tablas con distintos colores</h2>
+    <style>
+        .matrices-container {
+            display: flex;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .matrix {
+            
+            padding: 10px;
+            background: white;
+        }
+
+        .matrix-table {
+            border-collapse: collapse;
+        }
+
+        .matrix-table td {
+            width: 50px;
+            height: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+        }
+
+        /* Colores personalizados */
+        .c1 {
+            background-color: #fbbd75;
+        }
+
+        /* Naranja claro */
+        .c2 {
+            background-color: #a7d3e3;
+        }
+
+        /* Azul claro */
+        .c3 {
+            background-color: #b6cd94;
+        }
+
+        /* Verde claro */
+        .c4 {
+            background-color: #d09c9c;
+        }
+
+        /* Rojo claro */
+        .c5 {
+            background-color: #b7b0d8;
+        }
+
+        /* Lila */
+        .c6 {
+            background-color: #a1b9d4;
+        }
+
+        /* Azul medio */
+        .c7 {
+            background-color: #74a2d8;
+        }
+
+        /* Azul fuerte */
+        .c8 {
+            background-color: #a09352;
+        }
+
+        /* Marrón oliva */
+    </style>
+
+    <div class="matrices-container">
+        <!-- Primera tabla -->
+        <div class="matrix">
+            <table class="matrix-table">
+                <tr>
+                    <td class="c1">1</td>
+                    <td class="c1">2</td>
+                    <td class="c1">3</td>
+                    <td class="c1">3</td>
+                </tr>
+                <tr>
+                    <td class="c2">4</td>
+                    <td class="c2">4</td>
+                    <td class="c2">5</td>
+                    <td class="c2">5</td>
+                </tr>
+                <tr>
+                    <td class="c2">4</td>
+                    <td class="c2">4</td>
+                    <td class="c5">6</td>
+                    <td class="c5">7</td>
+                </tr>
+                <tr>
+                    <td class="c3">8</td>
+                    <td class="c3">9</td>
+                    <td class="c3">10</td>
+                    <td class="c3">11</td>
+                </tr>
+                <tr>
+                    <td class="c3">8</td>
+                    <td class="c4">12</td>
+                    <td class="c4">12</td>
+                    <td class="c3">11</td>
+                </tr>
+                <tr>
+                    <td class="c3">8</td>
+                    <td class="c6">13</td>
+                    <td class="c6">14</td>
+                    <td class="c6">14</td>
+                </tr>
+                <tr>
+                    <td class="c3">8</td>
+                    <td class="c6">13</td>
+                    <td class="c7">15</td>
+                    <td class="c7">16</td>
+                </tr>
+                <tr>
+                    <td class="c3">8</td>
+                    <td class="c6">13</td>
+                    <td class="c8">17</td>
+                    <td class="c8">17</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Segunda tabla -->
+        <div class="matrix">
+            <table class="matrix-table">
+                <tr>
+                    <td class="c1">1</td>
+                    <td class="c1">2</td>
+                    <td class="c1">3</td>
+                </tr>
+                <tr>
+                    <td class="c2">4</td>
+                    <td class="c2"></td>
+                    <td class="c2">5</td>
+                </tr>
+                <tr>
+                    <td class="c2"></td>
+                    <td class="c5">6</td>
+                    <td class="c5">7</td>
+                </tr>
+                <tr>
+                    <td class="c3">9</td>
+                    <td class="c3">10</td>
+                    <td class="c3">11</td>
+                </tr>
+                <tr>
+                    <td class="c3">8</td>
+                    <td class="c4">12</td>
+                    <td class="c3"></td>
+                </tr>
+                <tr>
+                    <td class="c3"></td>
+                    <td class="c6">14</td>
+                    <td class="c6"></td>
+                </tr>
+                <tr>
+                    <td class="c6">13</td>
+                    <td class="c7">15</td>
+                    <td class="c7">16</td>
+                </tr>
+                <tr>
+                    <td class="c8"></td>
+                    <td class="c8">17</td>
+                    <td class="c8"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <h2>Tabla 3</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="9">A</td>
+                <td rowspan="8">B</td>
+                <td rowspan="7">C</td>
+                <td rowspan="6">D</td>
+                <td rowspan="5">E</td>
+                <td rowspan="4">F</td>
+                <td>AH</td>
+                <td rowspan="4">H</td>
+                <td rowspan="5">I</td>
+                <td rowspan="6">J</td>
+                <td rowspan="7">K</td>
+                <td rowspan="8">L</td>
+                <td rowspan="10">M</td>
+            </tr>
+            <tr>
+                <td>G</td>
+            </tr>
+            <tr>
+                <td>GH</td>
+            </tr>
+            <tr>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td colspan="3">O</td>
+            </tr>
+            <tr>
+                <td colspan="5">P</td>
+            </tr>
+            <tr>
+                <td colspan="7">Q</td>
+            </tr>
+            <tr>
+                <td colspan="2">R</td>
+                <td>S</td>
+                <td>T</td>
+                <td>U</td>
+                <td>V</td>
+                <td>W</td>
+                <td colspan="2">X</td>
+            </tr>
+            <tr>
+                <td colspan="11">Y</td>
+            </tr>
+            <tr>
+                <td colspan="2">Z</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
