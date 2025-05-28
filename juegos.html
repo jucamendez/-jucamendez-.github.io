@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Duty - Juegos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-color: #111;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #ff2a2a;
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://image.api.playstation.com/vulcan/ap/rnd/202211/0722/kh4MHIuMdH9kTZwQth9lr5k0.png') no-repeat center center;
+            background-size: cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #ff2a2a;
+            position: relative;
+        }
+        
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .game-card {
+            width: 280px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 42, 42, 0.3);
+        }
+        
+        .game-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 15px;
+        }
+        
+        .game-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ff2a2a;
+        }
+        
+        .game-year {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-table th {
+            background-color: rgba(255, 42, 42, 0.2);
+            color: #ff2a2a;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: rgba(255, 42, 42, 0.1);
+        }
+        
+        footer {
+            background-color: #000;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5em;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .game-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">CALL OF DUTY</a>
+            <div class="nav-links">
+                <a href="contenido.html">Contenido</a>
+                <a href="juegos.html">Juegos</a>
+                <a href="referencias.html">Referencias</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>JUEGOS DESTACADOS</h1>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">LOS MEJORES TÍTULOS DE LA SAGA</h2>
+        <div class="games-container">
+            <div class="game-card">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202211/0722/kh4MHIuMdH9kTZwQth9lr5k0.png" alt="Modern Warfare II" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">Call of Duty: Modern Warfare II</h3>
+                    <p class="game-year">2022</p>
+                    <p>Secuela del exitoso reinicio de 2019, con una campaña intensa y un multijugador innovador.</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202010/0119/TuY6VJbJn4XqJcMkuMfU6QJZ.png" alt="Black Ops Cold War" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">Call of Duty: Black Ops Cold War</h3>
+                    <p class="game-year">2020</p>
+                    <p>Ambientado en la Guerra Fría, con una narrativa intrigante y decisiones que afectan la trama.</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202008/1420/HcLcfeQBZJ5iY3k5dNSyQJZO.png" alt="Warzone" class="game-img">
+                <div class="game-info">
+                    <h3 class="game-title">Call of Duty: Warzone</h3>
+                    <p class="game-year">2020</p>
+                    <p>El free-to-play Battle Royale que revolucionó el género con 150 jugadores y mecánicas únicas.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 50px; color: #ff2a2a; font-size: 1.8em;">COMPARATIVA DE JUEGOS RECIENTES</h3>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Juego</th>
+                    <th>Año</th>
+                    <th>Desarrollador</th>
+                    <th>Metacritic</th>
+                    <th>Ventas (millones)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Modern Warfare II</td>
+                    <td>2022</td>
+                    <td>Infinity Ward</td>
+                    <td>76</td>
+                    <td>25+</td>
+                </tr>
+                <tr>
+                    <td>Vanguard</td>
+                    <td>2021</td>
+                    <td>Sledgehammer</td>
+                    <td>73</td>
+                    <td>15+</td>
+                </tr>
+                <tr>
+                    <td>Black Ops Cold War</td>
+                    <td>2020</td>
+                    <td>Treyarch</td>
+                    <td>76</td>
+                    <td>30+</td>
+                </tr>
+                <tr>
+                    <td>Modern Warfare (2019)</td>
+                    <td>2019</td>
+                    <td>Infinity Ward</td>
+                    <td>80</td>
+                    <td>30+</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© 2023 Call of Duty Fan Page. Todos los derechos reservados a sus respectivos dueños.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
